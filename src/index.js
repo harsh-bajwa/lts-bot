@@ -17,7 +17,7 @@ new CommandHandler({
   commandsPath: path.join(__dirname, "../commands"),
   eventsPath: path.join(__dirname, "../events"),
   //validationsPath: path.join(__dirname, "../validations"),
-  //testServer: process.env.GUILDID,
+  testServer: process.env.GUILDID,
 });
 
 client.login(process.env.TOKEN);
