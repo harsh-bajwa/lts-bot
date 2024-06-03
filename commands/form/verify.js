@@ -9,6 +9,17 @@ const post = require("../../utils/post");
 
 module.exports = {
   run: async ({ interaction }) => {
+    const requiredChannel = "1246221544838008853";
+
+    //Anti-spam method
+    if (requiredChannel !== interaction.channel.id) {
+      interaction.reply({
+        content: `You can only use this command in <#${requiredChannel}>.`,
+        ephemeral: true,
+      });
+      return;
+    }
+
     const modal = new ModalBuilder({
       customId: `verify-${interaction.user.id}`,
       title: "Verify Form",
