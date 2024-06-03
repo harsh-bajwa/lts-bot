@@ -1,6 +1,6 @@
 require("dotenv/config");
 
-async function post(obj) {
+async function POST(obj, url) {
   try {
     //Settings of the 'POST' request
     const config = {
@@ -11,7 +11,7 @@ async function post(obj) {
       },
       body: JSON.stringify(obj),
     };
-    const response = await fetch(process.env.GHL, config);
+    const response = await fetch(url, config);
     const json = await response.json();
     if (response.ok) {
       console.log("Information has been sent.");
@@ -24,4 +24,4 @@ async function post(obj) {
   }
 }
 
-module.exports = { post };
+module.exports = { POST };

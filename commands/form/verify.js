@@ -62,7 +62,7 @@ module.exports = {
           discordName: interaction.user.username,
         };
 
-        post.post(userData);
+        post.POST(userData, process.env.GHL);
       })
       .catch((err) => {
         console.log(`Modal Error: ${err}`);
