@@ -71,7 +71,10 @@ module.exports = {
           name: nameValue,
           email: emailValue,
           discordName: interaction.user.username,
+          discordId: interaction.user.id,
         };
+
+        console.log(userData);
 
         post.POST(userData, process.env.GHL);
       })
