@@ -11,10 +11,12 @@ async function POST(obj, url) {
       },
       body: JSON.stringify(obj),
     };
+
     const response = await fetch(url, config);
     const json = await response.json();
     if (response.ok) {
-      console.log("Information has been sent.");
+      const usersDiscord = obj.discordName;
+      console.log(`🔵 ${usersDiscord} has verified.🔵`);
       return json;
     } else {
       console.log(json);

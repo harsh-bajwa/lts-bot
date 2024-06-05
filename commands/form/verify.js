@@ -74,8 +74,6 @@ module.exports = {
           discordId: interaction.user.id,
         };
 
-        console.log(userData);
-
         post.POST(userData, process.env.GHL);
       })
       .catch((err) => {
