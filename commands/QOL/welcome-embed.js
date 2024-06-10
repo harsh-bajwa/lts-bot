@@ -6,8 +6,8 @@ module.exports = {
     description: "This is for the welcome channel",
   },
 
-  run: async (interaction) => {
-    const embed = new EmbedBuilder()
+  run: (interaction) => {
+    const welcomeEmbed = new EmbedBuilder()
       .setColor("DarkButNotBlack")
       .setTitle("Leverage through Systems")
       .setURL("https://systemising.com")
@@ -28,6 +28,6 @@ module.exports = {
       )
       .setTimestamp();
 
-    await interaction.interaction.reply({ embeds: [embed] });
+    interaction.interaction.channel.send({ embeds: [welcomeEmbed] });
   },
 };
