@@ -8,7 +8,6 @@ module.exports = (message) => {
     const verifiedUserId = webhookArrayThird.replace(/[^0-9\.]+/g, "");
 
     const member = message.guild.members;
-    message.delete();
 
     member.addRole({
       user: verifiedUserId,
