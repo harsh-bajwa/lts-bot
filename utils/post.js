@@ -16,7 +16,7 @@ async function POST(obj, url) {
     const json = await response.json();
     if (response.ok) {
       const usersDiscord = obj.discordName;
-      console.log(`🔵 ${usersDiscord} has verified.🔵`);
+      console.log(`${usersDiscord} joined pipline. `);
       return json;
     } else {
       console.log(json);

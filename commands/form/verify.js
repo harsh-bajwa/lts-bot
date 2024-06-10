@@ -64,7 +64,10 @@ module.exports = {
         const reasonValue =
           modalInteraction.fields.getTextInputValue("reasonInput");
 
-        modalInteraction.reply(`Hello ${nameValue}! Enjoy the content!`);
+        modalInteraction.reply({
+          content: `Hello ${nameValue}! Please verify your email at ${emailValue}. (Please allow 5 minutes for email to be sent)`,
+          ephemeral: true,
+        });
 
         //Get data for 'POST' request with webhook
         const userData = {
