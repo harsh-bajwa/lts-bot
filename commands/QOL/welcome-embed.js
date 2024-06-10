@@ -1,5 +1,4 @@
 const { EmbedBuilder } = require("discord.js");
-const ltsImage = require("../../image/LTS");
 
 module.exports = {
   data: {
