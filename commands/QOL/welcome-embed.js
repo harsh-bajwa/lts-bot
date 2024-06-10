@@ -8,7 +8,7 @@ module.exports = {
 
   run: (interaction) => {
     const welcomeEmbed = new EmbedBuilder()
-      .setColor("DarkButNotBlack")
+      .setColor("Blurple")
       .setTitle("Leverage through Systems")
       .setURL("https://systemising.com")
       .setAuthor({
@@ -19,7 +19,7 @@ module.exports = {
         "Welcome to Leverage through Systems. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       )
       .addFields({
-        name: "verify",
+        name: "Verify",
         value: "use /verify in <#1246221544838008853> to unlock content.",
         inline: true,
       })
