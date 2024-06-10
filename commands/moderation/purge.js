@@ -1,6 +1,6 @@
 const {
   EmbedBuilder,
-  PermissionsBitField,
+  Interaction,
   ButtonBuilder,
   ActionRowBuilder,
   ButtonStyle,
@@ -26,6 +26,10 @@ module.exports = {
     permissionsRequired: [PermissionFlagsBits.ManageMessages],
   },
 
+  /**
+   *
+   * @param {Interaction} interaction
+   */
   run: async (interaction) => {
     const purgeInteraction = interaction.interaction;
 
