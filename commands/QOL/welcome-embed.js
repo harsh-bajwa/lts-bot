@@ -4,6 +4,7 @@ module.exports = {
   data: {
     name: "welcome-embed",
     description: "This is for the welcome channel",
+    devOnly: true,
   },
 
   run: (interaction) => {
